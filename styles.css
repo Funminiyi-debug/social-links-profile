@@ -103,7 +103,7 @@ main {
   background-color: var(--bg-secondary-color);
   padding: 1.5rem;
   border-radius: 1rem;
-  min-width: 30%;
+  min-width: 50%;
 }
 
 h1 {
@@ -160,6 +160,23 @@ ul > li:hover > a {
   font-size: var(--fs-regular);
 }
 
+@media (min-width: 376px) {
+  :root {
+    --fs-regular: 0.8rem;
+    --fs-medium: 1.1rem;
+    --fs-large: 1.3rem;
+  }
+
+  .container {
+    min-width: 30%;
+  }
+
+  ul li {
+    list-style: none;
+    padding: 0.5rem;
+  }
+}
+
 @media (min-width: 1440px) {
   :root {
     --fs-regular: 1rem;
@@ -169,6 +186,6 @@ ul > li:hover > a {
 
   ul li {
     list-style: none;
-    padding: 0.5rem;
+    padding: 0.7rem;
   }
 }
