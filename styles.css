@@ -1,0 +1,174 @@
+/* CSS RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/** END OF CSS RESET */
+
+:root {
+  --primary-color: hsl(75, 94%, 57%);
+  --neutral-color: hsl(0, 0%, 100%);
+  --bg-primary-color: hsl(0, 0%, 20%);
+  --bg-secondary-color: hsl(0, 0%, 12%);
+  --bg-tertiary-color: hsl(0, 0%, 8%);
+
+  --ff-primary: "Inter", sans-serif;
+
+  --fs-regular: 0.7rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.2rem;
+
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+}
+
+body {
+  background-color: var(--bg-tertiary-color);
+  color: var(--neutral-color);
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-primary);
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  background-color: var(--bg-secondary-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  min-width: 30%;
+}
+
+h1 {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-medium);
+}
+
+.hero div img {
+  border-radius: 50%;
+  margin: 1.5rem auto;
+  width: 30%;
+}
+
+h2.address {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: var(--fs-regular);
+  margin-bottom: 1rem;
+}
+
+.socials ul {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+  padding: 0;
+  gap: 1rem;
+}
+
+ul li {
+  list-style: none;
+  padding: 0.3rem;
+  background-color: var(--bg-primary-color);
+  border-radius: 0.5rem;
+}
+
+ul li:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: var(--neutral-color);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-regular);
+}
+
+ul > li:hover > a {
+  color: var(--bg-primary-color);
+}
+
+.caption {
+  font-size: var(--fs-regular);
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --fs-regular: 1rem;
+    --fs-medium: 1.2rem;
+    --fs-large: 1.5rem;
+  }
+
+  ul li {
+    list-style: none;
+    padding: 0.5rem;
+  }
+}
